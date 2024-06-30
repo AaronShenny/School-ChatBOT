@@ -15,4 +15,6 @@ vistualenv ai
 ai\scripts\activate
 pip install django==5.0.6
 python manage.py runserver
+```
+## Status : Completed sign up
 
