@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Authentication Complete</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            window.opener.location.href = '/chat';  // Redirect the parent window to /chat
+            window.close();  // Close the authentication window
+        };
+    </script>
+</head>
+<body>
+    <h1>Authentication Complete</h1>
+    <p>You can close this window now.</p>
+</body>
+</html>
