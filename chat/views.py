@@ -4,6 +4,7 @@ from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 from googleapiclient.discovery import build
+from . models import Signupinfo
 import os
 import json
 
@@ -54,7 +55,7 @@ def login(request):
 
         user_details = [name, email]
         print(user_details)
-
+        signupdatabase(user_details)
         # Optionally save the user details to a file
         with open('./credentials/user_details.json', 'w') as file:
             json.dump(user_details, file)
@@ -65,6 +66,10 @@ def login(request):
         print(f"An error occurred: {e}")
         return HttpResponse("An error occurred during login. Please try again.")
 
-
+def signupdatabase(user):
+    name = user[0]
+    email = user[1]
+    signupobj = Signupinfo(name=name,email=email)
+    signupobj.save()
 def chat(request):
     return HttpResponse('Chatting window')
