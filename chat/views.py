@@ -7,7 +7,7 @@ from googleapiclient.discovery import build
 from . models import Signupinfo
 import os
 import json
-
+signin = False
 # Scopes required to access the user's email and profile info
 SCOPES = [
     'https://www.googleapis.com/auth/userinfo.email',
@@ -71,5 +71,20 @@ def signupdatabase(user):
     email = user[1]
     signupobj = Signupinfo(name=name,email=email)
     signupobj.save()
+def checksignin():
+    global signin
+    try:
+        with open('./credentials/user_details.json', 'r') as file:
+            userdetails= json.load(file)
+            print(userdetails)
+            signin=True
+            return signin
+    except FileNotFoundError:
+        signin = False
+        return signin
+
 def chat(request):
-    return HttpResponse('Chatting window')
+    if checksignin():
+        return HttpResponse('Chatting window')
+    else:
+        return redirect('/login/')
