@@ -13,7 +13,7 @@ pip install virtualenv
 cd ai
 vistualenv ai
 ai\scripts\activate
-pip install django==5.0.6
+pip install -r requirements.txt
 python manage.py runserver
 ```
 ## Status : Created basic chat
