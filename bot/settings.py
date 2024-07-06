@@ -26,7 +26,9 @@ SECRET_KEY = 'django-insecure-i762+vmr*@0#nt3#9ms(d3eqi9s*i&r(w4(vkjxa10--i^7%2y
 DEBUG = True
 
 ALLOWED_HOSTS = ['bot-xxv7.onrender.com','127.0.0.1']
-CSRF_TRUSTED_ORIGINS = ['bot-xxv7.onrender.com'] 
+CSRF_TRUSTED_ORIGINS = ['https://bot-xxv7.onrender.com'] 
+CSRF_ALLOWED_ORIGINS = ["https://bot-xxv7.onrender.com"]
+CORS_ORIGINS_WHITELIST = ["https://bot-xxv7.onrender.com"]
 
 # Application definition
 
