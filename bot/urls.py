@@ -22,3 +22,4 @@ urlpatterns = [
     path('',  include('chat.urls')),
     path('app/',  include('chatt.urls'))
 ]
+handler404 = 'chat.views.custom_404_view'

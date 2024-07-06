@@ -15,6 +15,10 @@ SCOPES = [
     'openid'
 ]
 
+
+def custom_404_view(request, exception):
+    return render(request, '404.html', {}, status=404)
+
 def login(request):
     creds = None
     token_file = './credentials/token.json'
@@ -61,7 +65,7 @@ def login(request):
             json.dump(user_details, file)
 
         # Render the custom HTML template that closes the window
-        return redirect('/chat/')
+        return redirect('/app/chat/')
     except Exception as e:
         print(f"An error occurred: {e}")
         return HttpResponse("An error occurred during login. Please try again.")
