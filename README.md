@@ -16,5 +16,5 @@ ai\scripts\activate
 pip install -r requirements.txt
 python manage.py runserver
 ```
-## Status : Created basic chat
+## Status : Added favicon to the home page
 
