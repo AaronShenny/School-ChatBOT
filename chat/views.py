@@ -94,4 +94,4 @@ def chat(request):
         return redirect('/login/')
 
 def home(request):
-    return render(request, "home1.html")
+    return redirect('chatbot')
