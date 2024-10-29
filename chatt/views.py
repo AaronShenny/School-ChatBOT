@@ -34,7 +34,9 @@ def modal(model, q):
         "input: Grading system",
         "output: Yes, Mar Thoma Public School follows a Grading System from LKG to Class X.",
         "input : Rules and Regulations",
-        '''output : 1. All are expected to speak in English while in the school campus. Parents of
+        '''output :
+        Rules and Regulations
+         1. All are expected to speak in English while in the school campus. Parents of
 day scholars are requested to help in making their children conversant with
 English with a certain amount of English conversation at home. Children should
 be encouraged to read books and newspapers.
