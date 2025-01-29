@@ -3,7 +3,7 @@ from django.http import JsonResponse
 import google.generativeai as genai
 
 def configure_model():
-    genai.configure(api_key="AIzaSyBlX-u5jmgIMIYQfE9WXUMjsP8j0cULNLw")
+    genai.configure(api_key="AIzaSyAB3TR2i9tssMDJ-w6-eV3pwRiwALgzDDk")
 
     generation_config = {
         "temperature": 0.9,
