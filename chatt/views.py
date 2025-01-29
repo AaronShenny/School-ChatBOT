@@ -9,7 +9,7 @@ def configure_model():
         "temperature": 0.9,
         "top_p": 1,
         "top_k": 1,
-        "max_output_tokens": 20485,
+        "max_output_tokens": 2048585752,
     }
 
     safety_settings = [
